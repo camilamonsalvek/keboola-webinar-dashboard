@@ -16,7 +16,7 @@ st.title("Webinar Registration Dashboard")
 if os.path.exists(keboola_data_path):
     try:
         st.write(f"Loading data from {keboola_data_path}")
-        df = pd.read_csv(keboola_data_path)
+        df = pd.read_csv(keboola_data_path, compression='gzip')
         data_loaded = True
         st.success("Successfully loaded data from Keboola.")
     except Exception as e:

@@ -18,7 +18,7 @@ def main():
         print("Starting Streamlit server...")
         # For Keboola, we need to specify host=0.0.0.0 to allow external access
         subprocess.run([
-            "streamlit", "run", "app.py", 
+            "streamlit", "run", "app/app.py", 
             "--server.port=8501", 
             "--server.address=0.0.0.0",
             "--server.enableCORS=false",
